@@ -1,0 +1,413 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,letterpaper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+%\moderncvstyle{banking}                 % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{banking}                 % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                    % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                      % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage{enumitem}
+\setlist{leftmargin=7.5mm}
+%\setlist[enumerate]{itemsep=1mm}
+
+\newenvironment{benumerate}[1]{
+  \let\oldItem\item
+  \def\item{\addtocounter{enumi}{-2}\oldItem}
+  \begin{enumerate}[itemsep=0.0mm]
+    \setcounter{enumi}{#1}
+    \addtocounter{enumi}{1}
+  }{
+  \end{enumerate}
+}
+
+
+% character encoding
+\usepackage[utf8]{inputenc}            % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                  % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Jeong-Gyu}{Kim}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Department of Physics and Astronomy, 1 Gwanak-ro, Gwanak-gu}{Seoul, 08826}{Republic of Korea} % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+82~(10)~8638~0722}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{jgkim@astro.snu.ac.kr}                               % optional, remove / comment the line if not wanted
+\homepage{github.com/jeonggyukim}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+% \subsection{Research Interests}
+
+\section{Education}
+% \mycventry{Seoul National University}{Seoul, Korea}{Ph.D. in Astronomy}{}{2018}{aa}{bb}{cc}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  {\bfseries Seoul National University} & {\bfseries Seoul, Korea} \\
+  {\itshape Ph.D. in Astronomy} & {\itshape 08/2018, expected}\\%
+  {\small\textit{Advisor}: Prof. Woong-Tae Kim}\\
+  {\small\textit{Thesis:} Disruption of Molecular Clouds by Radiative
+  Feedback from Massive Stars} \\
+  \rule[-0.9ex]{-2.5pt}{4ex}
+ 
+  {\itshape M.S. in Astronomy} & {\itshape 02/2012}\\%
+  % {\small\textit{Thesis:} Gravitational Instability of
+  % Vertically-stratified, Pressure-confined, Rotating, Polytropic
+  % Disks}\\  
+  \rule[-0.9ex]{-2.5pt}{4ex}
+
+  {\itshape B.S. in Astronomy, \textit{cum laude}} & {\itshape 02/2010}\\%
+\end{tabular*}%
+
+% \cventry{08/2018, expected}{Ph.D. in Astronomy}{Seoul National
+%   University}{Seoul, Korea}{}{\textit{Advisor}: Prof. Woong-Tae Kim
+%   \\
+%   \textit{Thesis:} Disruption of Molecular Clouds by Radiative
+%   Feedback from Massive Stars} % arguments 3 to 6 can be left empty
+%  \rule[-0.9ex]{-2.5pt}{2ex}
+
+\section{Research Experience}
+
+\cventry{2014--2016 (2mo/yr)}{Visiting Student Research Collaborator}{Princeton
+  University}{Princeton, NJ, USA}{}{\textit{Mentor}: Prof. Eve
+  Ostriker}
+
+% \cventry{02/2012}{M.S. in Astronomy}{Seoul National University}{Seoul,
+%   Korea}{}{\textit{Advisor}: Prof. Woong-Tae Kim
+%   \\
+%   \textit{Thesis:} Gravitational Instability of Vertically-stratified,
+%   Pressure-confined, Rotating, Polytropic
+%   Disks} % arguments 3 to 6 can be left empty
+
+% \cventry{02/2010}{B.S. in Astronomy, \textit{cum laude}}{Seoul National
+%   University}{Seoul, Korea}{}{}{}
+
+% \section{Master thesis}
+% \cvitem{Title}{\emph{Title}}
+% \cvitem{supervisors}{Supervisors}
+% \cvitem{description}{Short thesis abstract}
+
+\section{Fellowships}
+\cventry{2014--2018}{National Research Foundation of Korea}{National
+  Junior Research Fellowship}{}{}{Project name: \textit{``Expansion of Dusty
+  Magnetized H II Regions and Their Dynamic Impact on the Interstellar
+  Medium''} (Total grants obtained as PI:
+  \$40,000/\emph{yr})}
+
+\cventry{2013--2014}{Seoul National University}{SNU Fellowship for the
+  Next Generation of Basic Research}{}{}{}
+
+\cventry{2013}{Department of Physics and Astronomy, Seoul National
+  University}{SNU Development Fund (Inha Kim) Scholarship}{}{}{}
+
+\cventry{2012}{Brain Korea 21}{Scholarship for Superior Academic
+  Performance}{}{}{}
+
+\cventry{2010--2011}{Full tuition awarded by Lotte Foundation}{Lotte
+  Scholarship}{}{}{}
+
+\cventry{2003--2004, 2008--2009}{Full tuition awarded by National
+  Research Foundation of Korea}{National Scholarship For Science and
+  Engineering}{}{}{}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+% \nocite{*}
+% \bibliographystyle{myplain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\section{Publications}
+
+\subsection{Refereed Publications
+  \href{http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=AST\&db_key=PRE\&qform=AST\&arxiv_sel=astro-ph\&arxiv_sel=cond-mat\&arxiv_sel=cs\&arxiv_sel=gr-qc\&arxiv_sel=hep-ex\&arxiv_sel=hep-lat\&arxiv_sel=hep-ph\&arxiv_sel=hep-th\&arxiv_sel=math\&arxiv_sel=math-ph\&arxiv_sel=nlin\&arxiv_sel=nucl-ex\&arxiv_sel=nucl-th\&arxiv_sel=physics\&arxiv_sel=quant-ph\&arxiv_sel=q-bio\&sim_query=YES\&ned_query=YES\&adsobj_query=YES\&aut_xct=YES\&aut_logic=OR\&obj_logic=OR\&author=Kim\%2C+Jeong-Gyu\&object=\&start_mon=\&start_year=\&end_mon=\&end_year=\&ttl_logic=OR\&title=\&txt_logic=OR\&text=\&nr_to_return=200\&start_nr=1\&jou_pick=ALL\&ref_stems=\&data_and=ALL\&group_and=ALL\&start_entry_day=\&start_entry_mon=\&start_entry_year=\&end_entry_day=\&end_entry_mon=\&end_entry_year=\&min_score=\&sort=SCORE\&data_type=SHORT\&aut_syn=YES\&ttl_syn=YES\&txt_syn=YES\&aut_wt=1.0\&obj_wt=1.0\&ttl_wt=0.3\&txt_wt=3.0\&aut_wgt=YES\&obj_wgt=YES\&ttl_wgt=YES\&txt_wgt=YES\&ttl_sco=YES\&txt_sco=YES\&version=1}{\color{blue}{(ADS Link)}}}
+
+\begin{benumerate}{6}
+\item \textit{Modeling Radiative Feedback from Massive Stars: I.
+  Implementation of Adaptive Ray Tracing Method and Tests}\\
+\textbf{Kim, J.-G.}, Kim, W.-T., Ostriker, E. C.,\& Skinner A. M.,
+  \textit{submitted to ApJ}
+\item \textit{Disruption of Molecular Clouds by Expansion of Dusty H II
+  Regions}\\
+\textbf{Kim, J.-G.}, Kim, W.-T., \& Ostriker, E. C. 2016, ApJ, 819,
+137
+\item \textit{Instability of Magnetized Ionization Fronts
+  Surrounding H II regions}\\
+\textbf{Kim, J.-G.}, Kim, W.-T. 2014, ApJ, 797, 135
+\item \textit{Nature of Wiggle Instability of Galactic Spiral
+  Shocks}\\
+Kim, W.-T., Kim, Y., \& \textbf{Kim, J.-G.} 2014, ApJ, 789, 68
+\item \textit{Instability of Evaporation Fronts in the
+  Interstellar Medium}\\
+\textbf{Kim, J.-G.}, Kim, W.-T. 2013, ApJ, 779, 48
+\item \textit{Gravitational Instability of Rotating,
+    Pressure-Confined,
+    Polytropic Gas Disks with Vertical Stratification}\\
+  \textbf{Kim, J.-G.}, Kim, W.-T., Seo Y. M., \& Hong, S. S. 2012,
+  ApJ, 761, 131
+\end{benumerate}
+
+\subsection{Papers in Preparation}
+\begin{enumerate}
+\item[] \textit{Modeling Radiative Feedback from Massive Stars:
+    II. Dispersal of Giant Molecular Clouds by Photoionization and
+    Radiation Pressure}\\
+  \textbf{Kim, J.-G.}, Kim, W.-T., \& Ostriker, E. C. \textit{2017,
+    to be submitted to ApJ}
+\item[] \textit{Modeling Radiative Feedback from Massive Stars:
+    III. Comparison of Star Formation Efficiencies in Observed and
+    Simulated Giant Molecular Clouds}\\
+  \textbf{Kim, J.-G.}, Kim, W.-T., \& Ostriker, E. C. \textit{2018, in
+    prep}
+\item[] \textit{Heating and Ionization of
+      the Diffuse Interstellar Medium by UV Radiation in TIGRESS}\\
+    \textbf{Kim, J.-G.}, Kim, C.-G., Seon K.-I., Kim, W.-T., \&
+    Ostriker, E. C. \textit{2018, in prep}
+\end{enumerate}
+
+% \cvitemwithcomment{}{\textit{Modeling Radiative Feedback from Massive Stars:
+%     II. Dispersal of Giant Molecular Clouds by Photoionization\\ and
+%     Radiation Pressure}\\
+%   \textbf{Kim, J.-G.}, Kim, W.-T., \& Ostriker, E. C. \textit{2017,
+%     in prep}}{} \cvitemwithcomment{}{\textit{Heating and Ionization of
+%     the Diffuse Interstellar Medium by UV Radiation in TIGRESS}\\
+%   \textbf{Kim, J.-G.}, Kim, C.-G., Seon K.-I., Kim, W.-T., \&
+%   Ostriker, E. C. \textit{2018, in prep}}{}
+
+\section{Conferences and Seminars (Selected)}
+
+\begin{benumerate}{13}
+\item Talk, \textit{Dispersal of Molecular Clouds by
+    Photoionization and Radiation Pressure}\\Star Formation in
+  Different Environments, Quy Nhon, Vietnam, Aug 7, 2017
+\item Talk, \textit{Dispersal of Molecular Clouds by UV
+    Radiation Feedback from Massive Stars}\\ 2017 Korean Astronomical
+  Society Spring Meeting, Seoul, Korea, Apr 13, 2017
+\item Talk, \textit{Radiation Hydrodynamic Simulations of Star Cluster
+    Formation in Turbulent Molecular Clouds}\\ Korean Numerical
+  Astrophysics Group Meeting, Daejeon, Korea, Dec 16, 2016
+\item Talk, \textit{Modeling Radiative Feedback from Massive
+    Stars}\\Star Formation/ISM Rendezvous, Princeton University, USA,
+  Nov 28, 2016
+\item Poster, \textit{Disruption of Molecular Clouds by Radiative
+    Feedback from Massive Stars}\\Star Formation 2016, Exeter, UK, Aug
+  22--26, 2016
+\item Talk, \textit{Modeling Radiative Feedback from Massive Stars:
+    Implementation of Adaptive Ray Tracing Method into the Athena
+    Code}\\ ASTRONUM 2016: 11th Annual International Conference on
+  Numerical Modeling of Space Plasma Flows, Monterey, USA, Jun 8, 2016
+\item Talk, \textit{Disruption of Molecular Clouds by
+    Expansion of Dusty HII Regions}\\ Star Formation/ISM Rendezvous,
+  Princeton University, USA, Oct 28, 2015
+%% \item Contributed Talk, \textit{Expansion of Dusty H II Regions and
+%%   Its Impact on Disruption of Molecular Clouds}, 2015 Korean
+%%   Astronomical Society Spring Meeting, Seoul, Korea, Apr 17, 2015
+% \item Seminar Talk, \textit{Instability of Evaporative Layers in the
+%   Interstellar Medium}, Korean Numerical Astrophysics Group Meeting,
+%   Daejeon, Korea, Jan 23, 2015
+\item Poster, \textit{Instability of Magnetized Ionization Fronts}\\
+  225th AAS Meeting, Seattle, USA, Jan 4--8, 2015
+\item Talk, \textit{Instability of Evaporative Layers in the
+    Interstellar Medium}\\ Star Formation/ISM Rendezvous, Princeton
+  University, USA, Nov 5, 2014
+\item Poster, \textit{Instability of Magnetized Ionization Fronts}\\
+  12th Asia-Pacific Regional IAU Meeting, Daejeon, Korea, Aug 18--22,
+  2014
+\item Attended, KITP program: \textit{Gravity's Loyal Opposition: The
+  Physics of Star Formation Feedback}, University of California, Santa
+  Barbara, USA, Jun 16--Jul 3, 2014
+\item Poster, \textit{Instability of Evaporation Fronts in the ISM}\\
+  Physical Processes in the ISM, MPE, Garching, Germany, Oct 21--25,
+  2013
+\item Attended, International Summer School on AstroComputing 2013:
+  \textit{Star \& Planet Formation}, University of California, Santa
+  Cruz, USA, Jul 22--Aug 9, 2013
+%% \item Contributed Talk, \textit{Instability of Evaporation Fronts in
+%%   the Interstellar Meidum}, 2013 Korean Astronomical Society Spring
+%%   Meeting, Daecheon, Korea, Apr 11, 2013
+%% \item Attended, \textit{Magnetic Fields in Astrophysics}, Asia Pacific
+%%   Center for Theoretical Physics, Pohang, Korea, Nov 19--22, 2012
+%% \item Seminar Talk, \textit{Gravitational Instability of Rotating,
+%%   Vertically-Stratified, Polytropic Disks}, Korean Numerical
+%%   Astrophysics Group Meeting, Daejeon, Korea, Nov 4, 2011
+%% \item Poster, \textit{Gravitational Instability of Rotating,
+%%   Vertically-Stratified, Polytropic Disks}, 2011 Korean Astronomical
+%%   Society Fall Meeting, Jeju, Korea, Oct 5--7, 2011
+%% \item Attended, \textit{2010 International School on Numerical
+%%   Relativity and Gravitational Waves}, Asia Pacific Center for
+%%   Theoretical Physics, Pohang, Korea, Jul 26--30, 2010
+\end{benumerate}
+
+
+\section{Competitively-Obtained Computing Time}
+\cvitemwithcomment{}{Co-I, 1.6 M CPU-hrs from KISTI on Tachyon2,\\
+  \textit{``Galactic Star Formation and Outflows Regulated by UV
+    Radiation and Supernova Feedback''}, 2017}{}
+\cvitemwithcomment{}{Co-I, 1.2 M CPU-hrs from KISTI on Tachyon2,\\
+  \textit{``Expansion of Dusty H II Regions and Its Dynamical Impact on
+    the Instestellar Medium''}, 2016}{}
+
+\section{Computer Skills}
+\cvitemwithcomment{Computer Languages}{C/C++, MPI}{}
+\cvitemwithcomment{Data Analysis/Visualization}{Python, IDL, yt, VisIt, ParaView}{}
+\cvitemwithcomment{Simulation Code}{\textit{Athena/Athena++}}{}
+
+
+% \section{Experience}
+% \subsection{Vocational}
+% \cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
+% Detailed achievements:%
+% \begin{itemize}%
+% \item Achievement 1;
+% \item Achievement 2, with sub-achievements:
+%   \begin{itemize}%
+%   \item Sub-achievement (a);
+%   \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+%     \begin{itemize}
+%     \item Sub-sub-achievement i;
+%     \item Sub-sub-achievement ii;
+%     \item Sub-sub-achievement iii;
+%     \end{itemize}
+%   \item Sub-achievement (c);
+%   \end{itemize}
+% \item Achievement 3.
+% \end{itemize}}
+% \cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+% \subsection{Miscellaneous}
+% \cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+
+
+
+% \section{Interests}
+% \cvitem{hobby 1}{Description}
+% \cvitem{hobby 2}{Description}
+% \cvitem{hobby 3}{Description}
+
+% \section{Extra 1}
+% \cvlistitem{Item 1}
+% \cvlistitem{Item 2}
+% \cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+\section{Academic References}
+\cvlistdoubleitem{
+  \textbf{Prof. Woong-Tae Kim}\\
+  \href{mailto:wkim@wkim.astro.snu.ac.kr}{\color{blue}wkim@astro.snu.ac.kr}\\
+  Department of Physics and Astronomy\\
+  Seoul National University\\
+  +82-2-880-6769}{
+  \textbf{Prof. Eve C.~Ostriker}\\
+  \href{mailto:eco@astro.princeton.edu}{\color{blue}eco@astro.princeton.edu}\\
+  Department of Astrophysical Sciences\\
+  Princeton University\\
+  +1-609-258-7240}
+\rule[-0.9ex]{-2.5pt}{5ex}
+\cvlistdoubleitem{
+  \textbf{Prof. Bon-Chul Koo}\\
+  \href{mailto:koo@wkim.astro.snu.ac.kr}{\color{blue}koo@astro.snu.ac.kr}\\
+  Department of Physics and Astronomy\\
+  Seoul National University\\
+  +82-2-880-6623}{}
+
+\section{Teaching Assistance}
+
+\begin{itemize}
+\item \textit{Man and the Universe} (non-major course), Teaching Assistant for
+  Prof. Jonghak Woo,  Fall 2012,
+\item \textit{Observational Astronomy}, Teaching Assistant for
+  Prof. Jonghak Woo, Spring 2012.
+\end{itemize}
+
+\section*{Miscellaneous}
+\begin{itemize}
+\item Military Service: Served as a weather observer in the Republic of Korea Air Force, 2005-2007
+\end{itemize}
+\begin{itemize}
+\item Departmental Service:
+  \begin{itemize}
+  \item SNU Astronomy Journal Club Coordinator, 2011--2013
+  \item Served as a part-time lecturer in \textit{An Introduction to
+      IDL Programming for Undergraduates}, Winter 2014
+\end{itemize}
+\end{itemize}
+
+
+% \section{References}
+% \begin{cvcolumns}
+%   % \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%   % \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%   % \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+% \end{cvcolumns}
+
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+% \clearpage
+% %-----       letter       ---------------------------------------------------------
+% % recipient data
+% \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+% \date{January 01, 1984}
+% \opening{Dear Sir or Madam,}
+% \closing{Yours faithfully,}
+% \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+% \makelettertitle
+
+% Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+% Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+% Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+
+% Albert Einstein discovered that $e=mc^2$ in 1905.
+
+% \[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+% \makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
