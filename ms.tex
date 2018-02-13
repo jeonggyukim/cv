@@ -18,6 +18,10 @@
 \setlist{leftmargin=7.5mm}
 %\setlist[enumerate]{itemsep=1mm}
 
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{dimgray}{rgb}{0.41, 0.41, 0.41}
+\definecolor{dodgerblue}{rgb}{0.12, 0.56, 1.0}
+
 \newenvironment{benumerate}[1]{
   \let\oldItem\item
   \def\item{\addtocounter{enumi}{-2}\oldItem}
@@ -46,7 +50,7 @@
 %\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{jgkim@astro.snu.ac.kr}                               % optional, remove / comment the line if not wanted
-\homepage{github.com/jeonggyukim}                         % optional, remove / comment the line if not wanted
+\homepage{jeonggyukim.github.io}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
@@ -78,13 +82,13 @@
   {\small\textit{Advisor}: Prof. Woong-Tae Kim}\\
   {\small\textit{Thesis:} Disruption of Molecular Clouds by Radiative
   Feedback from Massive Stars} \\
-  \rule[-0.9ex]{-2.5pt}{4ex}
+  \rule[-1.2ex]{-2.5pt}{4ex}
  
   {\itshape M.S. in Astronomy} & {\itshape 02/2012}\\%
   % {\small\textit{Thesis:} Gravitational Instability of
   % Vertically-stratified, Pressure-confined, Rotating, Polytropic
   % Disks}\\  
-  \rule[-0.9ex]{-2.5pt}{4ex}
+  \rule[-1.2ex]{-2.5pt}{4ex}
 
   {\itshape B.S. in Astronomy, \textit{cum laude}} & {\itshape 02/2010}\\%
 \end{tabular*}%
@@ -117,18 +121,17 @@
 % \cvitem{supervisors}{Supervisors}
 % \cvitem{description}{Short thesis abstract}
 
-\section{Fellowships}
+\section{Scholarships and Fellowships}
 \cventry{2014--2018}{National Research Foundation of Korea}{National
-  Junior Research Fellowship}{}{}{Project name: \textit{``Expansion of Dusty
-  Magnetized H II Regions and Their Dynamic Impact on the Interstellar
-  Medium''} (Total grants obtained as PI:
-  \$40,000/\emph{yr})}
+  Junior Research Fellowship (\normalfont{Grants obtained as PI: \$41,300/\emph{yr}})}{}{}{Project name: \textit{``Expansion of
+    Dusty Magnetized H II Regions and Their Dynamic Impact on the
+    Interstellar Medium''}}
 
-\cventry{2013--2014}{Seoul National University}{SNU Fellowship for the
+\cventry{2013}{Seoul National University}{SNU Fellowship for the
   Next Generation of Basic Research}{}{}{}
 
-\cventry{2013}{Department of Physics and Astronomy, Seoul National
-  University}{SNU Development Fund (Inha Kim) Scholarship}{}{}{}
+% \cventry{2013}{Department of Physics and Astronomy, Seoul National
+%   University}{SNU Development Fund (Inha Kim) Scholarship}{}{}{}
 
 \cventry{2012}{Brain Korea 21}{Scholarship for Superior Academic
   Performance}{}{}{}
@@ -141,82 +144,28 @@
   Engineering}{}{}{}
 
 % Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%  for numerical labels:
+%  \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}%
+%  CONSIDER MERGING WITH PREAMBLE PART to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 % \nocite{*}
 % \bibliographystyle{myplain}
 % \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
-\section{Publications}
+\input{publications}
 
-\subsection{Refereed Publications
-  \href{http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=AST\&db_key=PRE\&qform=AST\&arxiv_sel=astro-ph\&arxiv_sel=cond-mat\&arxiv_sel=cs\&arxiv_sel=gr-qc\&arxiv_sel=hep-ex\&arxiv_sel=hep-lat\&arxiv_sel=hep-ph\&arxiv_sel=hep-th\&arxiv_sel=math\&arxiv_sel=math-ph\&arxiv_sel=nlin\&arxiv_sel=nucl-ex\&arxiv_sel=nucl-th\&arxiv_sel=physics\&arxiv_sel=quant-ph\&arxiv_sel=q-bio\&sim_query=YES\&ned_query=YES\&adsobj_query=YES\&aut_xct=YES\&aut_logic=OR\&obj_logic=OR\&author=Kim\%2C+Jeong-Gyu\&object=\&start_mon=\&start_year=\&end_mon=\&end_year=\&ttl_logic=OR\&title=\&txt_logic=OR\&text=\&nr_to_return=200\&start_nr=1\&jou_pick=ALL\&ref_stems=\&data_and=ALL\&group_and=ALL\&start_entry_day=\&start_entry_mon=\&start_entry_year=\&end_entry_day=\&end_entry_mon=\&end_entry_year=\&min_score=\&sort=SCORE\&data_type=SHORT\&aut_syn=YES\&ttl_syn=YES\&txt_syn=YES\&aut_wt=1.0\&obj_wt=1.0\&ttl_wt=0.3\&txt_wt=3.0\&aut_wgt=YES\&obj_wgt=YES\&ttl_wgt=YES\&txt_wgt=YES\&ttl_sco=YES\&txt_sco=YES\&version=1}{\color{blue}{(ADS Link)}}}
+\section{Selected Conferences and Seminars}
 
-\begin{benumerate}{6}
-\item \textit{Modeling Radiative Feedback from Massive Stars: I.
-  Implementation of Adaptive Ray Tracing Method and Tests}\\
-\textbf{Kim, J.-G.}, Kim, W.-T., Ostriker, E. C.,\& Skinner A. M.,
-  \textit{submitted to ApJ}
-\item \textit{Disruption of Molecular Clouds by Expansion of Dusty H II
-  Regions}\\
-\textbf{Kim, J.-G.}, Kim, W.-T., \& Ostriker, E. C. 2016, ApJ, 819,
-137
-\item \textit{Instability of Magnetized Ionization Fronts
-  Surrounding H II regions}\\
-\textbf{Kim, J.-G.}, Kim, W.-T. 2014, ApJ, 797, 135
-\item \textit{Nature of Wiggle Instability of Galactic Spiral
-  Shocks}\\
-Kim, W.-T., Kim, Y., \& \textbf{Kim, J.-G.} 2014, ApJ, 789, 68
-\item \textit{Instability of Evaporation Fronts in the
-  Interstellar Medium}\\
-\textbf{Kim, J.-G.}, Kim, W.-T. 2013, ApJ, 779, 48
-\item \textit{Gravitational Instability of Rotating,
-    Pressure-Confined,
-    Polytropic Gas Disks with Vertical Stratification}\\
-  \textbf{Kim, J.-G.}, Kim, W.-T., Seo Y. M., \& Hong, S. S. 2012,
-  ApJ, 761, 131
-\end{benumerate}
-
-\subsection{Papers in Preparation}
-\begin{enumerate}
-\item[] \textit{Modeling Radiative Feedback from Massive Stars:
-    II. Dispersal of Giant Molecular Clouds by Photoionization and
-    Radiation Pressure}\\
-  \textbf{Kim, J.-G.}, Kim, W.-T., \& Ostriker, E. C. \textit{2017,
-    to be submitted to ApJ}
-\item[] \textit{Modeling Radiative Feedback from Massive Stars:
-    III. Comparison of Star Formation Efficiencies in Observed and
-    Simulated Giant Molecular Clouds}\\
-  \textbf{Kim, J.-G.}, Kim, W.-T., \& Ostriker, E. C. \textit{2018, in
-    prep}
-\item[] \textit{Heating and Ionization of
-      the Diffuse Interstellar Medium by UV Radiation in TIGRESS}\\
-    \textbf{Kim, J.-G.}, Kim, C.-G., Seon K.-I., Kim, W.-T., \&
-    Ostriker, E. C. \textit{2018, in prep}
-\end{enumerate}
-
-% \cvitemwithcomment{}{\textit{Modeling Radiative Feedback from Massive Stars:
-%     II. Dispersal of Giant Molecular Clouds by Photoionization\\ and
-%     Radiation Pressure}\\
-%   \textbf{Kim, J.-G.}, Kim, W.-T., \& Ostriker, E. C. \textit{2017,
-%     in prep}}{} \cvitemwithcomment{}{\textit{Heating and Ionization of
-%     the Diffuse Interstellar Medium by UV Radiation in TIGRESS}\\
-%   \textbf{Kim, J.-G.}, Kim, C.-G., Seon K.-I., Kim, W.-T., \&
-%   Ostriker, E. C. \textit{2018, in prep}}{}
-
-\section{Conferences and Seminars (Selected)}
-
-\begin{benumerate}{13}
+\begin{benumerate}{12}
 \item Talk, \textit{Dispersal of Molecular Clouds by
     Photoionization and Radiation Pressure}\\Star Formation in
   Different Environments, Quy Nhon, Vietnam, Aug 7, 2017
 \item Talk, \textit{Dispersal of Molecular Clouds by UV
     Radiation Feedback from Massive Stars}\\ 2017 Korean Astronomical
   Society Spring Meeting, Seoul, Korea, Apr 13, 2017
-\item Talk, \textit{Radiation Hydrodynamic Simulations of Star Cluster
-    Formation in Turbulent Molecular Clouds}\\ Korean Numerical
-  Astrophysics Group Meeting, Daejeon, Korea, Dec 16, 2016
-\item Talk, \textit{Modeling Radiative Feedback from Massive
+% \item Talk, \textit{Radiation Hydrodynamic Simulations of Star Cluster
+%     Formation in Turbulent Molecular Clouds}\\ Korean Numerical
+%   Astrophysics Group Meeting, Daejeon, Korea, Dec 16, 2016
+\item Seminar Talk, \textit{Modeling Radiative Feedback from Massive
     Stars}\\Star Formation/ISM Rendezvous, Princeton University, USA,
   Nov 28, 2016
 \item Poster, \textit{Disruption of Molecular Clouds by Radiative
@@ -226,7 +175,7 @@ Kim, W.-T., Kim, Y., \& \textbf{Kim, J.-G.} 2014, ApJ, 789, 68
     Implementation of Adaptive Ray Tracing Method into the Athena
     Code}\\ ASTRONUM 2016: 11th Annual International Conference on
   Numerical Modeling of Space Plasma Flows, Monterey, USA, Jun 8, 2016
-\item Talk, \textit{Disruption of Molecular Clouds by
+\item Seminar Talk, \textit{Disruption of Molecular Clouds by
     Expansion of Dusty HII Regions}\\ Star Formation/ISM Rendezvous,
   Princeton University, USA, Oct 28, 2015
 %% \item Contributed Talk, \textit{Expansion of Dusty H II Regions and
@@ -237,7 +186,7 @@ Kim, W.-T., Kim, Y., \& \textbf{Kim, J.-G.} 2014, ApJ, 789, 68
 %   Daejeon, Korea, Jan 23, 2015
 \item Poster, \textit{Instability of Magnetized Ionization Fronts}\\
   225th AAS Meeting, Seattle, USA, Jan 4--8, 2015
-\item Talk, \textit{Instability of Evaporative Layers in the
+\item Seminar Talk, \textit{Instability of Evaporative Layers in the
     Interstellar Medium}\\ Star Formation/ISM Rendezvous, Princeton
   University, USA, Nov 5, 2014
 \item Poster, \textit{Instability of Magnetized Ionization Fronts}\\
@@ -278,9 +227,69 @@ Kim, W.-T., Kim, Y., \& \textbf{Kim, J.-G.} 2014, ApJ, 789, 68
     the Instestellar Medium''}, 2016}{}
 
 \section{Computer Skills}
-\cvitemwithcomment{Computer Languages}{C/C++, MPI}{}
-\cvitemwithcomment{Data Analysis/Visualization}{Python, IDL, yt, VisIt, ParaView}{}
+\cvitemwithcomment{Programming Language}{C/C++, MPI, Python, IDL}{}
+\cvitemwithcomment{Visualization/Software}{yt, VisIt, ParaView, Git, GDB}{}
 \cvitemwithcomment{Simulation Code}{\textit{Athena/Athena++}}{}
+
+\section{Teaching Experience}
+\begin{itemize}
+\setlength\itemsep{0.0em}
+\item \textit{Man and the Universe} (non-major course), Teaching
+  Assistant for Prof. Jonghak Woo,  Fall 2012
+%  Duties: Lectures, grading.
+\item \textit{Observational Astronomy}, Teaching Assistant for
+  Prof. Jonghak Woo, Spring 2012
+\end{itemize}
+
+\section{Other Experience}
+\cvitem{Military Service}{Served as a weather observer in the Republic
+of Korea Air Force, 2005-2007}
+\textbf{Departmental Service:}
+\begin{itemize}
+\setlength\itemsep{0.0em}
+\item SNU Astronomy Journal Club Coordinator, 2011--2013
+\item Part-time lecturer for a short course on
+  \href{http://astro.snu.ac.kr/~idl_lecture}{\textit{\color{dodgerblue}An Introduction
+      to IDL Programming for Undergraduates}}, Feb 2014
+\item Lead editor of 
+  \href{https://github.com/astrosnu/grad_manual}{\color{dodgerblue}\textit{A quick guide
+      to SNU astro graduate students.}}, 2014
+\item Volunteered multiple times for Astronomy Open House, 2010--2014
+\end{itemize}
+
+% \begin{itemize}
+% \item Military Service
+% \end{itemize}
+% \begin{itemize}
+% \item Departmental Service:
+% \cvitem{Departmental Service}{Served as a part-time lecturer in
+% \textit{An Introduction to IDL Programming for Undergraduates}, Winter
+% 2014}
+%   \item SNU Astronomy Journal Club Coordinator, 2011--2013
+%   \item Served as a part-time lecturer in \textit{An Introduction to
+%       IDL Programming for Undergraduates}, Winter 2014
+% \end{itemize}
+
+\section{Academic References}
+\cvlistdoubleitem{
+  \textbf{Prof. Woong-Tae Kim}\\
+  \href{mailto:wkim@wkim.astro.snu.ac.kr}{\color{dodgerblue}wkim@astro.snu.ac.kr}\\
+  Department of Physics and Astronomy\\
+  Seoul National University\\
+  +82-2-880-6769}{
+  \textbf{Prof. Eve C.~Ostriker}\\
+  \href{mailto:eco@astro.princeton.edu}{\color{dodgerblue}eco@astro.princeton.edu}\\
+  Department of Astrophysical Sciences\\
+  Princeton University\\
+  +1-609-258-7240}
+\rule[-0.9ex]{-2.5pt}{5ex}
+\cvlistdoubleitem{
+  \textbf{Prof. Bon-Chul Koo}\\
+  \href{mailto:koo@wkim.astro.snu.ac.kr}{\color{dodgerblue}koo@astro.snu.ac.kr}\\
+  Department of Physics and Astronomy\\
+  Seoul National University\\
+  +82-2-880-6623}{}
+
 
 
 % \section{Experience}
@@ -306,9 +315,6 @@ Kim, W.-T., Kim, Y., \& \textbf{Kim, J.-G.} 2014, ApJ, 789, 68
 % \subsection{Miscellaneous}
 % \cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
-
-
-
 % \section{Interests}
 % \cvitem{hobby 1}{Description}
 % \cvitem{hobby 2}{Description}
@@ -318,49 +324,6 @@ Kim, W.-T., Kim, Y., \& \textbf{Kim, J.-G.} 2014, ApJ, 789, 68
 % \cvlistitem{Item 1}
 % \cvlistitem{Item 2}
 % \cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
-
-\section{Academic References}
-\cvlistdoubleitem{
-  \textbf{Prof. Woong-Tae Kim}\\
-  \href{mailto:wkim@wkim.astro.snu.ac.kr}{\color{blue}wkim@astro.snu.ac.kr}\\
-  Department of Physics and Astronomy\\
-  Seoul National University\\
-  +82-2-880-6769}{
-  \textbf{Prof. Eve C.~Ostriker}\\
-  \href{mailto:eco@astro.princeton.edu}{\color{blue}eco@astro.princeton.edu}\\
-  Department of Astrophysical Sciences\\
-  Princeton University\\
-  +1-609-258-7240}
-\rule[-0.9ex]{-2.5pt}{5ex}
-\cvlistdoubleitem{
-  \textbf{Prof. Bon-Chul Koo}\\
-  \href{mailto:koo@wkim.astro.snu.ac.kr}{\color{blue}koo@astro.snu.ac.kr}\\
-  Department of Physics and Astronomy\\
-  Seoul National University\\
-  +82-2-880-6623}{}
-
-\section{Teaching Assistance}
-
-\begin{itemize}
-\item \textit{Man and the Universe} (non-major course), Teaching Assistant for
-  Prof. Jonghak Woo,  Fall 2012,
-\item \textit{Observational Astronomy}, Teaching Assistant for
-  Prof. Jonghak Woo, Spring 2012.
-\end{itemize}
-
-\section*{Miscellaneous}
-\begin{itemize}
-\item Military Service: Served as a weather observer in the Republic of Korea Air Force, 2005-2007
-\end{itemize}
-\begin{itemize}
-\item Departmental Service:
-  \begin{itemize}
-  \item SNU Astronomy Journal Club Coordinator, 2011--2013
-  \item Served as a part-time lecturer in \textit{An Introduction to
-      IDL Programming for Undergraduates}, Winter 2014
-\end{itemize}
-\end{itemize}
-
 
 % \section{References}
 % \begin{cvcolumns}
@@ -401,7 +364,7 @@ Kim, W.-T., Kim, Y., \& \textbf{Kim, J.-G.} 2014, ApJ, 789, 68
 
 % \makeletterclosing
 
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+% %\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
