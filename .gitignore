@@ -4,4 +4,6 @@
 *.dvi
 *.out
 *.pdf
+!jgkim_cv.pdf
+!jgkim_pub.pdf
 auto/
