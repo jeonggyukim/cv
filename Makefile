@@ -24,8 +24,8 @@ pdflatex :
 	$(PDFLATEX) $(SRC2)
 	mv $(NAME).pdf $(TARGET).pdf
 	mv $(NAME2).pdf $(TARGET2).pdf
-	open $(TARGET).pdf &
-	open $(TARGET2).pdf &
+	$(OPEN) $(TARGET).pdf &
+	$(OPEN) $(TARGET2).pdf &
 
 # pdflatex2 : $(SRC2)
 # #	$(BIBTEX) $(NAME)
