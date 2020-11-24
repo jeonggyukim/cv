@@ -14,6 +14,8 @@
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                      % uncomment to suppress automatic page numbering for CVs longer than one page
 
+\usepackage{xcolor}
+
 \usepackage{enumitem}
 \setlist{leftmargin=7.5mm}
 %\setlist[enumerate]{itemsep=1mm}
@@ -82,8 +84,8 @@
   {\bfseries Seoul National University} & {\bfseries Seoul, Korea} \\
   {\itshape Ph.D. in Astronomy} & {\itshape 08/2018}\\%
   {\small\textit{Advisor}: Prof. Woong-Tae Kim}\\
-  {\small\textit{Thesis Title:} Disruption of Molecular Clouds by Radiative
-  Feedback from Massive Stars} \\
+%   {\small\textit{Thesis Title:} Dynamical Evolution of Giant Molecular Clouds \\Driven by UV Radiation Feedback
+% from Massive Stars} \\
   \rule[-1.2ex]{-2.5pt}{4ex}
  
   {\itshape M.S. in Astronomy} & {\itshape 02/2012}\\%
@@ -128,7 +130,7 @@
 \section{Honors}
 \cventry{2018--2021}{Princeton University}{Lyman Spitzer, Jr. Fellowship}{}{}{}
 
-\cventry{2018}{Colloge of Natural Sciences, Seoul National University}{Outstanding Thesis Award}{}{}{}
+\cventry{2018}{College of Natural Sciences, Seoul National University}{Outstanding Thesis Award}{}{}{}
 
 \cventry{2014--2018}{National Research Foundation of Korea}{National
   Junior Research Fellowship (\normalfont{Grants obtained as PI: \$41,300/\emph{yr}})}{}{}{Project name: \textit{``Expansion of
@@ -159,6 +161,7 @@
 % \bibliographystyle{myplain}
 % \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
+% Comment out to omit
 \input{publications}
 
 \section{Selected Conferences and Talks}
@@ -167,11 +170,17 @@
 \begin{itemize}
   \setlength\itemsep{0em}
 \item \textbf{Invited Seminar}, \textit{Modeling Dispersal of Molecular Clouds
+    by UV Radiation Feedback}\\ CCAPP (Zoom) Seminar, Ohio State University, OH,
+  USA, Nov 24, 2020
+\item \textbf{Invited Seminar}, \textit{Modeling Dispersal of Molecular Clouds
     by UV Radiation Feedback}\\ Thunch (Zoom) Seminar, Princeton University, NJ,
   USA, Nov 12, 2020
-\item \textbf{Invited Talk}, \textit{Modeling Dispersal of Molecular Clouds
+\item \textbf{Invited Seminar}, \textit{Modeling Dispersal of Molecular Clouds
     by UV Radiation Feedback}\\ Astronomy (Zoom) Seminar, University of
   Kentucky, KY, USA, Oct 29, 2020
+\item \textbf{Invited Talk}, \textit{Modeling Dispersal of Molecular Clouds by
+    UV Radiation Feedback}\\ Ringberg Workshop on Computational Galaxy
+  Formation, Tegernsee, Germany, Apr 20, 2020 (Cancelled due to COVID-19)
 \item \textbf{Invited Review}, \textit{Numerical Modeling of Warm Ionized
     Medium: A Large-scale Perspective}\\ WIM in Galaxies Workshop, Green Bank
   Observatory, WV, USA, Oct 8, 2019
@@ -203,7 +212,7 @@
 \item \textbf{Poster}, \textit{Dispersal of Giant Molecular Clouds by
     Photoionization and Radiation Pressure}\\ 231st AAS Meeting,
   Washington D.C., USA, Jan 11, 2018
-\item \textbf{Colloquium}, \textit{Dispersal of Giant Molecular Clouds by
+\item \textbf{Invited Colloquium}, \textit{Dispersal of Giant Molecular Clouds by
     Photoionization and Radiation Pressure}\\ Osaka University, Japan,
   Dec 21, 2017
 \item \textbf{Contributed Talk}, \textit{Dispersal of Molecular Clouds by Photoionization
@@ -275,10 +284,10 @@
 \setlength\itemsep{0.0em}
 \item \textbf{Lachlan Lancaster}, Princeton PhD student, \textit{Stellar Wind Bubble
 Expansion in the Turbulent ISM} (thesis project), co-advised with Prof. Eve
-Ostriker and Dr. Chang-Goo Kim, 2019--2020
+Ostriker and Dr. Chang-Goo Kim, 2019--present
 \item \textbf{Erin Kado-Fong}, Princeton PhD student, \textit{Diffuse Ionized Gas in
     Simulations of Multiphase, Star-forming Galactic Disks} (semester project),
-  co-advised with Prof. Eve Ostriker and Dr. Chang-Goo Kim, 2018--2019
+  co-advised with Prof. Eve Ostriker and Dr. Chang-Goo Kim, 2018--2020
 \item \textbf{Nina Filippova}, Princeton undergraduate, \textit{Numerical
     Magnetohydrodynamics Simulations of Star Formation and Giant Molecular Cloud
     Destruction} (senior thesis), co-advised with Prof. Eve Ostriker, 2019--2020
@@ -316,11 +325,12 @@ of Korea Air Force, 2005-2007}
 \setlength\itemsep{0.0em}
 \item SNU Astronomy Journal Club Coordinator, 2011--2013
 \item Part-time lecturer for % a short course on
-  \href{http://astro.snu.ac.kr/~idl_lecture}{\textit{\color{dodgerblue}An Introduction
-      to IDL Programming for Undergraduates}}, Feb 2014
-\item Lead editor of 
-  \href{https://github.com/astrosnu/grad_manual}{\color{dodgerblue}\textit{A quick guide
-      to SNU astro graduate students.}}, 2014
+\textit{An Introduction to IDL Programming for Undergraduates}, Feb 2014
+  % \href{http://astro.snu.ac.kr/~idl_lecture}{\textit{\color{dodgerblue}An Introduction
+  %     to IDL Programming for Undergraduates}}, Feb 2014
+\item Lead editor of \textit{A quick guide to SNU astro graduate students.}, 2014
+  % \href{https://github.com/astrosnu/grad_manual}{\color{dodgerblue}\textit{A quick guide
+  %     to SNU astro graduate students.}}, 2014
 \item Volunteered multiple times for Astronomy Open House, 2010--2014
 \end{itemize}
 
@@ -350,12 +360,12 @@ of Korea Air Force, 2005-2007}
   Princeton University\\
   +1-609-258-7240}
 \rule[-0.9ex]{-2.5pt}{5ex}
-% \cvlistdoubleitem{
-%   \textbf{Prof. Bon-Chul Koo}\\
-%   \href{mailto:koo@wkim.astro.snu.ac.kr}{\color{dodgerblue}koo@astro.snu.ac.kr}\\
-%   Department of Physics and Astronomy\\
-%   Seoul National University\\
-%   +82-2-880-6623}{}
+\cvlistdoubleitem{
+  \textbf{Prof. Takashi Hosokawa}\\
+  \href{mailto:hosokawa@tap.scphys.kyoto-u.ac.jp}{\color{dodgerblue}hosokawa@tap.scphys.kyoto-u.ac.jp}\\
+  Department of Physics\\
+  Kyoto University\\
+  +81-75-753-3840}{}
 
 
 
